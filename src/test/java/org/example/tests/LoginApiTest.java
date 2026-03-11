@@ -21,7 +21,7 @@ public class LoginApiTest {
     private LoginApiClient loginApiClient;
 
     // Valid test credentials
-    private static final String TEST_EMAIL = "johndo";
+    private static final String TEST_EMAIL = "nelson@gmail.com";
     private static final String TEST_PASSWORD = "Chikitsa@123";
     private static final String TEST_FACILITY_ID = "b60fae41-3a86-4d4f-8ca9-8180a7d44e0e";
     private static final String TEST_FACILITY_NAME = "SMS Hospital";

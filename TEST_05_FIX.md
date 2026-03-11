@@ -16,7 +16,7 @@ Old assertion: response.getExpiresIn() < 31536000  // (1 year in seconds)
 Actual value:  1772705043  // (Unix timestamp - much larger!)
 ```
 
-The test was comparing a Unix timestamp against relative seconds, which always failed.
+The test was comparing a Unix timestamp against relative seconds, causing failures.
 
 ## Solution
 

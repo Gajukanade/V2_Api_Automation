@@ -2,6 +2,7 @@ package org.example.models;
 
 import com.google.gson.annotations.SerializedName;
 
+
 /**
  * Login Response model for hospital admin authentication
  * Maps to actual API response with accessToken and refreshToken
@@ -45,9 +46,19 @@ public class LoginResponse {
         private String id;
         @SerializedName("hospital_name")
         private String hospitalName;
+        @SerializedName("city_name")
+        private String cityName;
+        @SerializedName("state_name")
+        private String stateName;
 
         public String getId() { return id; }
         public String getHospitalName() { return hospitalName; }
+        public String getCityName() { return cityName; }
+        public String getStateName() { return stateName; }
+
+        public Object getAddressLine1() {
+            return null;
+        }
     }
 
     // Nested class for user
@@ -56,12 +67,31 @@ public class LoginResponse {
         private String id;
         @SerializedName("username")
         private String username;
+        @SerializedName("first_name")
+        private String firstName;
+        @SerializedName("last_name")
+        private String lastName;
         @SerializedName("emails")
         private java.util.List<Email> emails;
+        @SerializedName("roles")
+        private java.util.List<Role> roles;
 
         public String getId() { return id; }
         public String getUsername() { return username; }
+        public String getFirstName() { return firstName; }
+        public String getLastName() { return lastName; }
         public java.util.List<Email> getEmails() { return emails; }
+        public java.util.List<Role> getRoles() { return roles; }
+
+        public static class Role {
+            @SerializedName("id")
+            private String id;
+            @SerializedName("name")
+            private String name;
+
+            public String getId() { return id; }
+            public String getName() { return name; }
+        }
 
         public static class Email {
             @SerializedName("email")
